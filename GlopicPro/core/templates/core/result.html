@@ -1,0 +1,13 @@
+{% block content %}
+
+<div class="container">
+    <h1>Yipee! MoonLight has identified this for you</h1>
+    <img src="{{image_basestr}}" class="img-fluid" alt="Asta">
+    {% for number_plate in number_plates%}
+        <p>Number Plate: {{number_plate}}</p>
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}
