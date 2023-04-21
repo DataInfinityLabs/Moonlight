@@ -33,7 +33,10 @@ def glowit(request):
 
 
 # Convert the image to a base64-encoded string
-        image_basestr =  "data:image/jpeg;base64," +str(base64.b64encode(frame.tobytes()).decode('utf-8'))
+
+        image_basestr = "data:image/jpeg;base64," + base64.b64encode(cv2.imencode('.jpg', frame)[1]).decode('utf-8')
+
+
         
         
         context = {
