@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MoonLight</title>
 
         <!-- Font Awesome -->
     <link
@@ -27,7 +27,7 @@
 
 
 </head>
-<body>
+<body style="height: 100vh;">
 
    <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,30 +51,30 @@
         <!-- Navbar brand -->
         <a class="navbar-brand mt-2 mt-lg-0" href="#">
           <img
-            src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-            height="15"
-            alt="MDB Logo"
+            src="{% static 'images/moonlight2.png' %}"
+            height="40"
+            alt="Moon Light logo"
             loading="lazy"
           />
         </a>
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Team</a>
+          {% comment %} <li class="nav-item">
+            <a class="nav-link" href="#"></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Projects</a>
-          </li>
+          </li> {% endcomment %}
         </ul>
         <!-- Left links -->
       </div>
       <!-- Collapsible wrapper -->
   
       <!-- Right elements -->
-      <div class="d-flex align-items-center">
+      {% comment %} <div class="d-flex align-items-center">
         <!-- Icon -->
         <a class="text-reset me-3" href="#">
           <i class="fas fa-shopping-cart"></i>
@@ -141,7 +141,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> {% endcomment %}
       <!-- Right elements -->
     </div>
     <!-- Container wrapper -->

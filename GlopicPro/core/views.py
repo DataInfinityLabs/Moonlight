@@ -17,7 +17,6 @@ model = MoonLight()
 def index(request):
     return render(request, "core/index.html")
 
-
 def glowit(request):
     if request.method == 'POST':
         file = request.FILES.get('ImgFile')
@@ -36,9 +35,6 @@ def glowit(request):
 
         image_basestr = "data:image/jpeg;base64," + base64.b64encode(cv2.imencode('.jpg', frame)[1]).decode('utf-8')
 
-
-        
-        
         context = {
             "image_basestr": image_basestr,
             "number_plates": number_plates

@@ -6,18 +6,45 @@
 {% block content %}
     
 
+ <style>
+    /* style for a custom file upload input */
+    .c-input {
+        color: #fff;
+        background-color: #3b71ca;
+        border: 1px solid #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 30px;
+    }
     
-    <section style="height: 90vh; width:100vw;" class="d-flex 
-    align-items-center  justify-content-center">
+    .c-input:hover {
+        transform: translateY(-2px);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .c-input:focus {
+        outline: none;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+
+
+ </style>
+
+    
+    <section style="width:100vw;" class="mt-5 text-center">
         <div class="container">
-            <h1>File Upload Form</h1>
+            <h1>Upload an image to detect!</h1>
             <form action="/glowit" class="file-upload-form" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <label for="file-input" class="file-input-label">
-                    <span class="file-input-icon">&#x1F4C1;</span>
-                    <span class="file-input-text">Choose a file</span>
-                </label>
-                <input type="file" id="file-input" class="file-input" name="ImgFile">
+                <div class="container text-center">
+                    <input type="file" id="file-input" class="file-input    " name="ImgFile" 
+                    style="display:none;"
+                    >
+                    <label for="file-input" class="file-label d-block c-input m-auto my-3">Upload an image!</label
+                </div>
                 <button type="submit" class="btn btn-primary">Upload</button>
             </form>
         </div>
